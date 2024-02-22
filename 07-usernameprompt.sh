@@ -8,6 +8,6 @@ echo "Username entered is :$USERNAME"
 
 echo "Enter password:"
 
-read PASSWORD
+read -s PASSWORD #-s will not print in console
 
 echo "Password entered is :$PASSWORD"
