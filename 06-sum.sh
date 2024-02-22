@@ -6,8 +6,8 @@ SUM=$((NUMBER1+NUMBER2))
 echo "sum is: $SUM"
 
 
-#NUMBER1=$1
-#NUMBER2=$2
-#SUM=$(NUMBER1+NUMBER2)
+NUMBER1=$1
+NUMBER2=$2
+SUM=$((NUMBER1+NUMBER2))
 
-#echo "sum from command prompt is: $SUM"
+echo "sum from command prompt is: $SUM"
