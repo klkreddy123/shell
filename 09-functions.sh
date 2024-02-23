@@ -1,3 +1,6 @@
+DATE=$(date %F)
+FILE_NAME=$0
+LOG_FILE=/tmp/$FILE_NAME-$DATE.log
 VALIDATE(){
 if [ $1 -ne 0 ]
     then
@@ -19,10 +22,10 @@ then
     exit 1
 fi
 
-yum install git -y
+yum install git -y &>>$LOG_FILE
 
 VALIDATE $? "Installing ... GIT"
 
-yum install postdffix -y
+yum install postdffix -y &>>$LOG_FILE
 
 VALIDATE $? "Installing ... Postfix"
