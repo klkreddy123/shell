@@ -1,10 +1,10 @@
 VALIDATE(){
 if [ $1 -ne 0 ]
     then
-        echo "installation is failure"
+        echo "$2 is failure"
         exit 1
     else
-        echo "installation is success"
+        echo "$2 is success"
 fi
 }
 USER=$(id -u)
