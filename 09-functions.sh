@@ -26,6 +26,6 @@ yum install git -y &>>$LOG_FILE
 
 VALIDATE $? "Installing ... GIT"
 
-yum install postdffix -y &>>$LOG_FILE
+yum install postfix -y &>>$LOG_FILE
 
 VALIDATE $? "Installing ... Postfix"
