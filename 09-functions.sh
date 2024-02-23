@@ -17,8 +17,8 @@ fi
 
 yum install git -y
 
-VALIDATE $?
+VALIDATE $? "Installing ... GIT"
 
 yum install postfix -y
 
-VALIDATE $?
+VALIDATE $? "Installing ... Postfix"
