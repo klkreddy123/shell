@@ -1,4 +1,4 @@
-DATE=$(date %F)
+DATE=$(date)
 FILE_NAME=$0
 LOG_FILE=/tmp/$FILE_NAME-$DATE.log
 VALIDATE(){
