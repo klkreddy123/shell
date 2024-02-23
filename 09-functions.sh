@@ -1,10 +1,10 @@
 VALIDATE(){
 if [ $1 -ne 0 ]
     then
-        echo "$2 is $RED failure $NC"
+        echo -e "$2 is $RED failure $NC"
         exit 1
     else
-        echo "$2 is $GREEN success $NC"
+        echo -e "$2 is $GREEN success $NC"
 fi
 }
 
