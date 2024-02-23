@@ -19,6 +19,6 @@ yum install git -y
 
 VALIDATE $? "Installing ... GIT"
 
-yum install postfix -y
+yum install postdffix -y
 
 VALIDATE $? "Installing ... Postfix"
