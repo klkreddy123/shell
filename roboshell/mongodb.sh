@@ -1,3 +1,5 @@
+#!/bin/bash
+
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
