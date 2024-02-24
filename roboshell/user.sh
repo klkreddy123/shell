@@ -42,37 +42,37 @@ mkdir /app &>>$LOG_FILE
 
 VALIDATE $? "creating directory"
 
-curl -o /tmp/catalogue.zip https://roboshop-builds.s3.amazonaws.com/catalogue.zip &>>$LOG_FILE 
+curl -o /tmp/user.zip https://roboshop-builds.s3.amazonaws.com/user.zip &>>$LOG_FILE 
 
-VALIDATE $? "downloading catalogue"
+VALIDATE $? "downloading user"
 
 cd /app &>>$LOG_FILE
 
 VALIDATE $? "changing directory"
 
-unzip /tmp/catalogue.zip &>>$LOG_FILE
+unzip /tmp/user.zip &>>$LOG_FILE
 
-VALIDATE $? "unxipping catalogue"
+VALIDATE $? "unxipping user"
 
 npm install &>>$LOG_FILE
 
 VALIDATE $? "npm installing"
 
-cp /root/shell/roboshell/catalogue.service /etc/systemd/system/catalogue.service &>>$LOG_FILE
+cp /root/shell/roboshell/user.service /etc/systemd/system/user.service &>>$LOG_FILE
 
-VALIDATE $? "copying catalogue service"
+VALIDATE $? "copying user service"
 
 systemctl daemon-reload &>>$LOG_FILE
 
 VALIDATE $? "daemon reload"
 
-systemctl enable catalogue &>>$LOG_FILE
+systemctl enable user &>>$LOG_FILE
 
-VALIDATE $? "enable catalogue"
+VALIDATE $? "enable user"
 
-systemctl start catalogue &>>$LOG_FILE
+systemctl start user &>>$LOG_FILE
 
-VALIDATE $? "start catalogue"
+VALIDATE $? "start user"
 
 cp /root/shell/roboshell/mongo.repo /etc/yum.repos.d/mongo.repo &>>$LOG_FILE
 
@@ -81,5 +81,3 @@ VALIDATE $? "copy mongo repo"
 yum install mongodb-org-shell -y &>>$LOG_FILE
 
 VALIDATE $? "installing mongodb"
-
-mongo --host mongodb.kautomation.online </app/schema/catalogue.js
