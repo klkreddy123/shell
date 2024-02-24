@@ -83,3 +83,5 @@ yum install mongodb-org-shell -y &>>$LOG_FILE
 VALIDATE $? "installing mongodb"
 
 mongo --host mongodb.kautomation.online </app/schema/catalogue.js
+
+VALIDATE $? "loading mongodb schema"
