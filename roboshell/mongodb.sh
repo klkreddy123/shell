@@ -16,7 +16,7 @@ SCRIPT_NAME=$0
 LOG_FILE=/tmp/$SCRIPT_NAME-$DATE.log
 USER= $(id -u)
 
-if [ id -ne 0 ]
+if [ $USER -ne 0 ]
     then
         echo "logged in users is not root user"
         exit 1
