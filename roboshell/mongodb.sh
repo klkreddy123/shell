@@ -14,7 +14,7 @@ GREEN="\e[32m"
 NOCOLOR="\e[0m"
 SCRIPT_NAME=$0
 LOG_FILE=/tmp/$SCRIPT_NAME-$DATE.log
-USER= $(id -u)
+USER=$(id -u)
 if [ $USER -ne 0 ]
     then
         echo "logged in users is not root user"
