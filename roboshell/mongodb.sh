@@ -8,7 +8,7 @@ fi
 
 }
 
-DATE=$(date %+F)
+DATE=$(date +%F)
 RED="\e[31m"
 GREEN="\e[32m"
 NOCOLOR="\e[0m"
